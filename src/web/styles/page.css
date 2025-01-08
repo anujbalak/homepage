@@ -1,5 +1,14 @@
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 .page {
-    background-color: red;
-    border: red solid;
+   --header-bg-color: 0, 90, 255;
+   --header-text-color: 246, 246, 255;
+   --number-color: 255, 6, 0;
+   --black-color: 0, 0, 0;
 }
