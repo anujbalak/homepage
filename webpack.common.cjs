@@ -4,7 +4,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: [path.resolve(__dirname, './src/web/entry/')],
+        app: [path.resolve(__dirname, 'src/web/entry')],
     },
     plugins: [
         new htmlWebpackPlugin({
@@ -16,6 +16,7 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+        assetModuleFilename: 'images/[hash][ext][query]',
     },
     optimization: {
         runtimeChunk: 'single',
