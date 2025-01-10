@@ -13,6 +13,8 @@ function header() {
     header.className = 'header'
     greetingTextContainer.className = 'greeting-text-container';
     greetingText.className = 'greeting-text'
+    greetingText.ariaLabel = 'hello'
+    greetingText.tabIndex = 0
     greatingZero.className = 'greeting-zero'
 
     greetingText.innerText = 'Hell';
