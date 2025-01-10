@@ -1,0 +1,123 @@
+main.projects-body-container {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    background-color: rgb(var(--project-body-bg-color));
+    color: rgb(var(--text-on-poject-body));
+    min-height: 100vh;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #4a4a4a12 1px, transparent 1px),
+    linear-gradient(to bottom, #80808012 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+div.projects-text-container {
+    display: flex;
+    padding: 1em;
+}
+
+p.projects-text {
+    font-size: 2rem;
+    display: flex;
+    gap: 0.5em;
+    font-weight: 600;
+}
+
+p.projects-text::before {
+    content: 'let';
+    color: rgb(var(--code-on-project-body));
+}
+
+p.projects-text::after {
+    content: '=';
+    color: rgb(var(--code-on-project-body));
+}
+
+div.projects-container {
+    place-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 2em 0;
+}
+
+div.project-container {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+}
+
+img.project-image {
+}
+
+div.project-info {
+    width: 260px;
+    display: grid;
+    grid-template-rows: 1fr, min-content;
+    border: solid 2px rgb(var(--black-color));
+}
+
+div.project-image-container {
+    height: 260px;
+}
+
+span.start-bracket {
+    min-height: 30em;
+    width: 2em;
+    border: solid 0.5em rgb(var(--code-on-project-body));
+    border-right: none;
+    margin-right: 0.2em;
+    /* box-shadow: -5px -5px rgb(var(--black-color)); */
+}
+
+span.close-bracket {
+    min-height: 30em;
+    width: 2em;
+    border: solid 0.5em rgb(var(--code-on-project-body));
+    border-left: none;
+    margin-right: 0.2em;
+    /* box-shadow: 5px 5px rgb(var(--black-color)); */
+}
+
+div.project-description-container {
+    border-top: 2px solid rgb(var(--black-color));
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+p.project-description {
+    font-size: 1.1rem;
+    margin: 0.2em;
+    font-weight: 600;
+}
+
+a.link-preset {
+    margin: 0.3em;
+}
+
+a.link-preset img {
+    width: 2em
+}
+
+div.comma-container {
+    display: flex;
+    align-items: end;
+}
+
+p.comma {
+    font-size: 3rem;
+    font-family: monospace;
+    color: rgb(var(--code-on-project-body));
+    font-weight: 900;
+    margin: 0.1em;
+}
+
+div.project-container:last-of-type div.comma-container {
+    display: none;
+}
