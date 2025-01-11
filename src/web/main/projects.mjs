@@ -17,7 +17,8 @@ import t3Img from "../../assets/images/projects/t3.jpg"
 export function renderProjects() {
     const projectsBodyContainer = document.createElement('main');
     const projectsTextContainer = document.createElement('div');
-    const projectsText = document.createElement('p');
+    const projectsText = document.createElement('h2');
+    const projectsArray = document.createElement('div');
     const projectsContainer = document.createElement('div');
     const startBracket = document.createElement('span');
     const closeBracket = document.createElement('span');
@@ -25,6 +26,7 @@ export function renderProjects() {
     projectsBodyContainer.className = 'projects-body-container';
     projectsTextContainer.className = 'projects-text-container';
     projectsText.className = 'projects-text';
+    projectsArray.className = 'projects-array';
     projectsContainer.className = 'projects-container'
     startBracket.className = 'start-bracket'
     closeBracket.className = 'close-bracket';
@@ -32,11 +34,12 @@ export function renderProjects() {
 
     projectsBodyContainer.appendChild(projectsTextContainer);
     projectsTextContainer.appendChild(projectsText);
-    projectsBodyContainer.appendChild(projectsContainer);
     const page = document.querySelector('div.page');
     page.appendChild(projectsBodyContainer);
-
-    projectsContainer.appendChild(startBracket);
+    projectsBodyContainer.appendChild(projectsArray);
+    
+    projectsArray.appendChild(startBracket);
+    projectsArray.appendChild(projectsContainer)
 
 
     // battleship
@@ -46,17 +49,30 @@ export function renderProjects() {
     //aakhya
     renderProject(projects.aakhya.name, projects.aakhya.description, projects.aakhya.repo, projects.aakhya.preview, aakhyaImg, githubImageSource, externalLinkImage, projectsContainer)
 
-    projectsContainer.appendChild(closeBracket);
+    //mausam
+    renderProject(projects.mausam.name, projects.mausam.description, projects.mausam.repo, projects.mausam.preview, mausamImg, githubImageSource, externalLinkImage, projectsContainer)
+    
+
+    // picks
+    renderProject(projects.pick.name, projects.pick.description, projects.pick.repo, projects.pick.preview, picksImg, githubImageSource, externalLinkImage, projectsContainer)
+
+    //calc
+    renderProject(projects.calc.name, projects.calc.description, projects.calc.repo, projects.calc.preview, calcImg, githubImageSource, externalLinkImage, projectsContainer)
+
+    // t3
+    renderProject(projects.t3.name, projects.t3.description, projects.t3.repo, projects.t3.preview, t3Img, githubImageSource, externalLinkImage, projectsContainer)
+
+    projectsArray.appendChild(closeBracket);
 }
 
 function renderProject(title, description, sourceLink, previewLink, image, githubLogo, externalLinkImg, projectsContainer) {
     const projectContainer = document.createElement('div');
     const projectInfo = document.createElement('div');
     const commaContainer = document.createElement('div');
-    const projectImageContainer = document.createElement('div');
+    const projectImageContainer = document.createElement('a');
     const projectImage = document.createElement('img');
     const projectDescriptionContainer = document.createElement('div')
-    const projectName = document.createElement('p');
+    const projectName = document.createElement('h3');
     const projectDescription = document.createElement('p');
     const githubLink = linkPreset(sourceLink, githubLogo, 'github')
     const preview = linkPreset(previewLink, externalLinkImg, 'view preview')
@@ -72,6 +88,10 @@ function renderProject(title, description, sourceLink, previewLink, image, githu
     projectDescription.className = 'project-description';
     projectName.className = 'project-name';
 
+
+    projectImageContainer.href = previewLink
+    projectImageContainer.alt = title
+    projectImageContainer.target = '_blank'
     projectImage.src = image;
     projectImage.alt = ''
     projectName.innerText = title
@@ -89,5 +109,14 @@ function renderProject(title, description, sourceLink, previewLink, image, githu
     projectContainer.appendChild(commaContainer);
     commaContainer.appendChild(comma);
     projectsContainer.appendChild(projectContainer);
+    projectContainer.addEventListener('click', () => {
+        projectClickHandler(projectContainer);
+    })
 }
 
+function projectClickHandler(container) {
+    container.classList.add('clicked');
+    setTimeout(() => {
+        container.classList.remove('clicked');
+    }, 2000)
+}
