@@ -16,11 +16,15 @@ div.greeting-text-container {
     flex-direction: row;
 }
 
-div.greeting-text-container {
+h1.greeting-text, p.greeting-zero  {
     font-size: calc(5vw + 5rem);
     font-family: monospace;
     color: rgb(var(--header-text-color));
     font-weight: 700;
+}
+
+div.greeting-text {
+    
 }
 
 p.greeting-zero {

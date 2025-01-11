@@ -7,7 +7,7 @@ function header() {
     const page = document.querySelector('div.page');
     const header = document.createElement('header')
     const greetingTextContainer = document.createElement('div');
-    const greetingText = document.createElement('p');
+    const greetingText = document.createElement('h1');
     const greatingZero = document.createElement('p');
     
     header.className = 'header'
