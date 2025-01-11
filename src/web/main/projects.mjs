@@ -3,6 +3,17 @@ import githubImageSource from '../../assets/icons/light/github-light.svg'
 import externalLinkImage from '../../assets/icons/dark/external-link-dark.svg'
 import projects from '../../assets/data/projects_data.json'
 
+// project screenshots 
+import battleshipImg from '../../assets/images/projects/battleship.jpg';
+import aakhyaImg from "../../assets/images/projects/aakhya.jpg";
+import calcImg from "../../assets/images/projects/calc.jpg";
+import mausamImg from "../../assets/images/projects/mausam.jpg";
+import picksImg from "../../assets/images/projects/picks.jpg";
+import t3Img from "../../assets/images/projects/t3.jpg"
+
+
+// 
+
 export function renderProjects() {
     const projectsBodyContainer = document.createElement('main');
     const projectsTextContainer = document.createElement('div');
@@ -29,11 +40,11 @@ export function renderProjects() {
 
 
     // battleship
-    renderProject(projects.battleship.name, projects.battleship.description, projects.battleship.repo, projects.battleship.preview, 'src/assets/images/template.png', githubImageSource, externalLinkImage, projectsContainer)
+    renderProject(projects.battleship.name, projects.battleship.description, projects.battleship.repo, projects.battleship.preview, battleshipImg, githubImageSource, externalLinkImage, projectsContainer)
 
 
     //aakhya
-    renderProject(projects.aakhya.name, projects.aakhya.description, projects.aakhya.repo, projects.aakhya.preview, 'src/assets/images/template.png', githubImageSource, externalLinkImage, projectsContainer)
+    renderProject(projects.aakhya.name, projects.aakhya.description, projects.aakhya.repo, projects.aakhya.preview, aakhyaImg, githubImageSource, externalLinkImage, projectsContainer)
 
     projectsContainer.appendChild(closeBracket);
 }
