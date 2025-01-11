@@ -1,6 +1,7 @@
 import { linkPreset } from "./link-preset.mjs";
 import githubImageSource from '../../assets/icons/light/github-light.svg'
-import externalImageLinkSource from '../../assets/icons/dark/external-link-dark.svg'
+import externalLinkImage from '../../assets/icons/dark/external-link-dark.svg'
+import projects from '../../assets/data/projects_data.json'
 
 export function renderProjects() {
     const projectsBodyContainer = document.createElement('main');
@@ -25,22 +26,29 @@ export function renderProjects() {
     page.appendChild(projectsBodyContainer);
 
     projectsContainer.appendChild(startBracket);
-    renderProject('src/assets/images/template.png', 'just a placeholder of a dogshit website', githubImageSource, 'www.google.com', 'www.github.com', externalImageLinkSource, projectsContainer)
-    renderProject('src/assets/images/template.png', 'just a placeholder of a dogshit website', githubImageSource, 'www.google.com', 'www.github.com', externalImageLinkSource, projectsContainer)
+
+
+    // battleship
+    renderProject(projects.battleship.name, projects.battleship.description, projects.battleship.repo, projects.battleship.preview, 'src/assets/images/template.png', githubImageSource, externalLinkImage, projectsContainer)
+
+
+    //aakhya
+    renderProject(projects.aakhya.name, projects.aakhya.description, projects.aakhya.repo, projects.aakhya.preview, 'src/assets/images/template.png', githubImageSource, externalLinkImage, projectsContainer)
 
     projectsContainer.appendChild(closeBracket);
 }
 
-function renderProject(projectImg, description, githubLogo, livePreview, sourceLink, externalLinkImg, projects) {
+function renderProject(title, description, sourceLink, previewLink, image, githubLogo, externalLinkImg, projectsContainer) {
     const projectContainer = document.createElement('div');
     const projectInfo = document.createElement('div');
     const commaContainer = document.createElement('div');
     const projectImageContainer = document.createElement('div');
     const projectImage = document.createElement('img');
     const projectDescriptionContainer = document.createElement('div')
+    const projectName = document.createElement('p');
     const projectDescription = document.createElement('p');
     const githubLink = linkPreset(sourceLink, githubLogo, 'github')
-    const preview = linkPreset(livePreview, externalLinkImg, 'view preview')
+    const preview = linkPreset(previewLink, externalLinkImg, 'view preview')
     const comma = document.createElement('p');
 
     projectContainer.className = 'project-container';
@@ -51,9 +59,11 @@ function renderProject(projectImg, description, githubLogo, livePreview, sourceL
     projectImage.className = 'project-image';
     projectDescriptionContainer.className = 'project-description-container';
     projectDescription.className = 'project-description';
+    projectName.className = 'project-name';
 
-    projectImage.src = projectImg;
+    projectImage.src = image;
     projectImage.alt = ''
+    projectName.innerText = title
     projectDescription.innerText = description;
     comma.innerText = ',';
 
@@ -61,11 +71,12 @@ function renderProject(projectImg, description, githubLogo, livePreview, sourceL
     projectInfo.appendChild(projectImageContainer);
     projectImageContainer.appendChild(projectImage);
     projectInfo.appendChild(projectDescriptionContainer);
-    projectDescriptionContainer.appendChild(projectDescription);
+    projectDescriptionContainer.appendChild(projectName);
     projectDescriptionContainer.appendChild(githubLink)
     projectDescriptionContainer.appendChild(preview)
+    projectDescriptionContainer.appendChild(projectDescription);
     projectContainer.appendChild(commaContainer);
     commaContainer.appendChild(comma);
-    projects.appendChild(projectContainer);
+    projectsContainer.appendChild(projectContainer);
 }
 

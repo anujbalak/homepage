@@ -94,15 +94,14 @@ div.project-description-container {
 p.project-description {
     font-size: 1.1rem;
     margin: 0.2em;
-    font-weight: 600;
 }
 
 a.link-preset {
-    margin: 0.3em;
+    margin: 0.2em;
 }
 
 a.link-preset img {
-    width: 2em
+    width: 1.8em
 }
 
 div.comma-container {
@@ -120,4 +119,9 @@ p.comma {
 
 div.project-container:last-of-type div.comma-container {
     display: none;
+}
+
+p.project-name {
+    margin: 0 0.2em;
+    font-size: 1.5rem;
 }
