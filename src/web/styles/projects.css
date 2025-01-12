@@ -8,15 +8,14 @@
 }
 
 
-main.projects-body-container {
+div.projects-body-container {
     display: grid;
     grid-template-rows: min-content 1fr;
     background-color: rgb(var(--project-body-bg-color));
     color: rgb(var(--text-on-poject-body));
     min-height: 100vh;
 }
-
-main {
+div.projects-body-container  {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to right, #4a4a4a12 1px, transparent 1px),

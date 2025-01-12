@@ -15,7 +15,7 @@ import t3Img from "../../assets/images/projects/t3.jpg"
 // 
 
 export function renderProjects() {
-    const projectsBodyContainer = document.createElement('main');
+    const projectsBodyContainer = document.createElement('div');
     const projectsTextContainer = document.createElement('div');
     const projectsText = document.createElement('h2');
     const projectsArray = document.createElement('div');
@@ -34,8 +34,8 @@ export function renderProjects() {
 
     projectsBodyContainer.appendChild(projectsTextContainer);
     projectsTextContainer.appendChild(projectsText);
-    const page = document.querySelector('div.page');
-    page.appendChild(projectsBodyContainer);
+    const main = document.querySelector('main.main');
+    main.appendChild(projectsBodyContainer);
     projectsBodyContainer.appendChild(projectsArray);
     
     projectsArray.appendChild(startBracket);
