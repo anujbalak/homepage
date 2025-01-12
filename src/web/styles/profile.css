@@ -1,0 +1,10 @@
+:root {
+    --about-page-bg: 225, 200, 166;
+    --about-page-text: 53, 50, 45;
+}
+
+div.about-page {
+    min-height: 100vh;
+    background-color: rgb(var(--about-page-bg));
+    color: rgb(var(--about-page-text));
+}
