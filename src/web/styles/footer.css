@@ -1,0 +1,93 @@
+:root {
+    --footer-bg: 30, 30, 45;
+    --foter-text: 232, 232, 242;
+}
+
+footer#footer-page {
+    min-height: 100vh;
+    background-color: rgb(var(--footer-bg));
+    color: rgb(var(--foter-text));
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 3em;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    background: url(../../assets/images/background/ssscribble.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+div.detail-container {
+    display: grid;
+    gap: 3em;
+}
+
+div.detail-container div.mobile-container img {
+    filter: grayscale(1) brightness(0%);
+}
+
+footer#footer-page div.detail-container img {
+    max-width: 2em;
+    filter: invert(95%) sepia(5%) saturate(281%) hue-rotate(202deg) brightness(93%) contrast(103%);
+}
+
+div.social-container a.link-preset img[alt="github"] {
+    width: 3em;
+}
+
+div.contact-me-text-container {
+    display: grid;
+}
+
+h2.contact-me-text {
+    font-size: 2rem;
+    justify-self: start;
+}
+
+div.revoke-container {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+p.revoke-text {
+    font-size: 1.2rem;
+}
+
+div.address-container p.address-text {
+    font-size: 1.2rem;
+}
+
+div.mobile-container, div.email-container, div.social-container {
+    display: flex;
+    gap: 1em;
+}
+
+div.social-container {
+    align-items: center;
+}
+
+div.social-container a.github-text {
+    color: aqua;
+    font-size: 1.4em;
+}
+
+p.mobile-number, p.email {
+    font-size: 1.08rem;
+}
+
+picture.footer-image {
+    filter: grayscale(1);
+}
+
+
+@media only screen and (max-width: 1200px) {
+    footer#footer-page {
+        grid-template-columns: none;
+    }
+
+    div.image-container {
+        display: none;
+    }
+}
