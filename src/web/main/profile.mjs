@@ -2,6 +2,12 @@ import { linkPreset } from "./link-preset.mjs";
 import githubLogo from '../../assets/icons/light/github-light.svg'
 import projects from '../../assets/data/projects_data.json'
 
+// profile
+import profile300w from "../../assets/images/profile/profile-300w.jpg"
+import profile400w from "../../assets/images/profile/profile-400w.jpg"
+import profile600w from "../../assets/images/profile/profile-600w.jpg"
+import profile1000w from "../../assets/images/profile/profile-1000w.jpg"
+
 export function renderAbout() {
     about();
 }
@@ -40,4 +46,38 @@ function about() {
     aboutTextContainer.appendChild(aboutMeText);
     aboutTextContainer.appendChild(aboutText);
     aboutTextContainer.appendChild(githubLink);
+
+    profileSource(profile1000w, 2000, image);
+    profileSource(profile600w, 1200, image)
+    profileSource(profile400w, 600, image)
+    profileSource(profile300w, 300, image);
+    profileImg(profile400w, image);
+    aboutTextContainer.addEventListener('click', () => {
+        projectClickHandler(aboutTextContainer);
+    })
 }
+
+function profileSource(srcset, width, picture) {
+    const src = document.createElement('source');
+    src.srcset = srcset;
+    src.media = `(min-width: ${width}px)`
+    picture.appendChild(src);
+}
+
+function profileImg(src, picture) {
+    const img = document.createElement('img');
+    
+    img.className = 'profile-img'
+    img.src = src;
+    img.alt = "A pebble"
+
+    picture.appendChild(img);
+}
+
+function projectClickHandler(container) {
+    container.classList.add('clicked');
+    setTimeout(() => {
+        container.classList.remove('clicked');
+    }, 2000)
+}
+
