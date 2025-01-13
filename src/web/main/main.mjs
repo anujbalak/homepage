@@ -1,3 +1,5 @@
+import '../styles/profile.css'
+import '../styles/projects.css'
 import { renderProjects } from "./projects.mjs";
 import { renderAbout } from "./profile.mjs";
 
