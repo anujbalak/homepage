@@ -23,6 +23,7 @@ export function renderProjects() {
     const startBracket = document.createElement('span');
     const closeBracket = document.createElement('span');
     
+    projectsBodyContainer.id = 'projects';
     projectsBodyContainer.className = 'projects-body-container';
     projectsTextContainer.className = 'projects-text-container';
     projectsText.className = 'projects-text';

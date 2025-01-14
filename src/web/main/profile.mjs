@@ -23,6 +23,7 @@ function about() {
     const aboutText = document.createElement('p');
     const githubLink = linkPreset(projects.github, githubLogo, 'github')
 
+    aboutPage.id = 'about'
     aboutPage.className = 'about-page';
     imageContainer.className = 'profile-image-container';
     image.className = 'profile-image'
