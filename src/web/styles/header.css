@@ -1,6 +1,6 @@
 header.header {
     background-color: rgb(var(--header-bg-color));
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -14,6 +14,7 @@ header.header {
 div.greeting-text-container {
     display: flex;
     flex-direction: row;
+    place-self: center;
 }
 
 h1.greeting-text, p.greeting-zero  {
