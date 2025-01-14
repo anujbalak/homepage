@@ -3,7 +3,7 @@
     --foter-text: 232, 232, 242;
 }
 
-footer#footer-page {
+footer.footer-page {
     min-height: 100vh;
     background-color: rgb(var(--footer-bg));
     color: rgb(var(--foter-text));
@@ -27,7 +27,7 @@ div.detail-container div.mobile-container img {
     filter: grayscale(1) brightness(0%);
 }
 
-footer#footer-page div.detail-container img {
+footer.footer-page div.detail-container img {
     max-width: 2em;
     filter: invert(95%) sepia(5%) saturate(281%) hue-rotate(202deg) brightness(93%) contrast(103%);
 }

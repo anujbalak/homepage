@@ -16,7 +16,8 @@ export function renderFooter() {
 function footer() {
     const footerPage = document.createElement("footer");
     
-    footerPage.id = 'footer-page';
+    footerPage.id = 'footer';
+    footerPage.className = 'footer-page';
     const page = document.querySelector('div.page');
     page.appendChild(footerPage);
     details(footerPage);
