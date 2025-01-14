@@ -1,6 +1,9 @@
+import { menu } from "./menu.mjs";
+import "../styles/menu.css"
 
 export function renderHeader() {
     header()
+    menu();
 }
 
 function header() {
