@@ -19,3 +19,7 @@
 .page {
     font-family: monospace;
 }
+
+.none {
+    display: none;
+}
