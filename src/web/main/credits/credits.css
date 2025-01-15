@@ -1,0 +1,82 @@
+:root {
+    --credits-bg: 5, 35, 6;
+    --credits-text: 161, 227, 158;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.back-button-container {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+div.back-button-container a {
+    background-color: transparent;
+    border: 2px solid rgb(var(--credits-text));
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+div.back-button-container a {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+
+div.back-button-container a:hover, 
+div.back-button-container a:focus {
+    background-color: rgb(var(--credits-text));
+    color: rgb(var(--credits-bg));
+    
+}
+
+div.credits-container {
+    background-color: rgb(var(--credits-bg));
+    display: grid;
+    grid-template-rows: 8em 1fr;
+    min-height: 100vh;
+}
+
+div.credit-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2.credit-text {
+    font-size: 2rem;
+    color: rgb(102, 251, 94);
+}
+
+a, p, li {
+    color: rgb(var(--credits-text));
+}
+
+ul.credit-links {
+    display:  flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+li {
+    list-style: none;
+}
+
+li.credit-link-container {
+    display: flex;
+    justify-content: start;
+    margin: 0 1em;
+    gap: 0.5em;
+    font-size: 1.4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+a {
+    font-style: italic;
+}
