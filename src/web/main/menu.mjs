@@ -1,5 +1,3 @@
-import menuBtnIcon from "../../assets/icons/dark/menu.svg";
-import closeMenuBtnIcon from "../../assets/icons/dark/x.svg"
 
 export function menu() {
     menuButton();
