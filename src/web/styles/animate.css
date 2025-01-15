@@ -1,10 +1,9 @@
 div {
-    opacity: 0;
-    will-change: opacity;
-    transition: opacity ease-in-out 0.8s;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity ease-in-out 0.8s;
 }
 
 .animated {
-    opacity: 1;
+  opacity: 1;
 }
-

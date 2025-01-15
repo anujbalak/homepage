@@ -1,91 +1,93 @@
 :root {
-    --about-page-bg: 0, 0, 0;
-    --about-page-text: 255, 0, 123;
-    --logo-filter: invert(16%) sepia(94%) saturate(6510%) hue-rotate(324deg) brightness(100%) contrast(105%);
+  --about-page-bg: 0, 0, 0;
+  --about-page-text: 255, 0, 123;
+  --logo-filter: invert(16%) sepia(94%) saturate(6510%) hue-rotate(324deg)
+    brightness(100%) contrast(105%);
 }
 
 div.about-page {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    min-height: 100vh;
-    background-color: rgb(var(--about-page-bg));
-    color: rgb(var(--about-page-text));
-    padding: 10em 0;
-    background: url(../../assets/images/background/ccchaos.svg);
-    background-position: center;
-    background-size: cover;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(var(--about-page-bg));
+  color: rgb(var(--about-page-text));
+  padding: 10em 0;
+  background: url(../../assets/images/background/ccchaos.svg);
+  background-position: center;
+  background-size: cover;
 }
 
 div.profile-image-container {
-    transform: translate(10%, 0%);
-    z-index: 3;
+  transform: translate(10%, 0%);
+  z-index: 3;
 }
 
 img.profile-img {
-    border-radius: 1.5em;
-    filter: grayscale(1) ;
+  border-radius: 1.5em;
+  filter: grayscale(1);
 }
 
 div.my-name-container {
-    position: absolute;
-    left: 15%;
-    bottom: -75%;
-    z-index: 4;
+  position: absolute;
+  left: 15%;
+  bottom: -75%;
+  z-index: 4;
 }
 
 h1.my-name {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 div.about-text-container {
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: calc(50vw + 10em);
-    padding: 5%;;
-    border: 2px solid rgb(var(--about-page-text));
-    border-radius: 1em;
-    margin-right: 2em;
-    transition: 
-        background-color 0.5s ease-in-out,
-        color 0.5s ease-in-out;
-    opacity: 85%;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: calc(50vw + 10em);
+  padding: 5%;
+  border: 2px solid rgb(var(--about-page-text));
+  border-radius: 1em;
+  margin-right: 2em;
+  transition:
+    background-color 0.5s ease-in-out,
+    color 0.5s ease-in-out;
+  opacity: 85%;
 }
 
-div.about-text-container:focus, div.about-text-container:hover, div.about-text-container.clicked {
-    background-color: rgb(var(--about-page-text));
-    color: rgb(var(--about-page-bg));
-    --logo-filter: none;
+div.about-text-container:focus,
+div.about-text-container:hover,
+div.about-text-container.clicked {
+  background-color: rgb(var(--about-page-text));
+  color: rgb(var(--about-page-bg));
+  --logo-filter: none;
 }
-
 
 h2.about-me-text {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 p.about-text {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 div.about-text-container a.link-preset img {
-    min-width: 2.5em;
-    filter: var(--logo-filter);
-    will-change: filter;
-    transition: filter ease-in-out0.5s;
+  min-width: 2.5em;
+  filter: var(--logo-filter);
+  will-change: filter;
+  transition: filter ease-in-out0.5s;
 }
 
 @media only screen and (max-width: 800px) {
-    div.about-page {
-        flex-direction: column;
-    }
+  div.about-page {
+    flex-direction: column;
+  }
 
-    div.profile-image-container {
-        transform: translate(0%, 10%);
-    }
+  div.profile-image-container {
+    transform: translate(0%, 10%);
+  }
 
-    div.my-name-container {
-        left: 25%;
-        bottom: -15%;
-    }
+  div.my-name-container {
+    left: 25%;
+    bottom: -15%;
+  }
 }

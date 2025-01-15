@@ -1,43 +1,43 @@
 {
-    "battleship": {
-        "name": "Battleship",
-        "description": "A classic battelship game written for web with beautiful design.",
-        "repo": "https://github.com/anujbalak/battleship",
-        "preview": "https://anujbalak.github.io/battleship/"
-    },
-    "aakhya": {
-        "name": "Aakhya",
-        "description": "To do website, never miss your simple daily goals also save to local storage.",
-        "repo": "https://github.com/anujbalak/aakhya",
-        "preview": "https://anujbalak.github.io/aakhya/"
-    },
+  "battleship": {
+    "name": "Battleship",
+    "description": "A classic battelship game written for web with beautiful design.",
+    "repo": "https://github.com/anujbalak/battleship",
+    "preview": "https://anujbalak.github.io/battleship/"
+  },
+  "aakhya": {
+    "name": "Aakhya",
+    "description": "To do website, never miss your simple daily goals also save to local storage.",
+    "repo": "https://github.com/anujbalak/aakhya",
+    "preview": "https://anujbalak.github.io/aakhya/"
+  },
 
-    "mausam": {
-        "name": "Mausam",
-        "description": "Check weather with some other factors like humidity, pressure etc. also with quotes? and jokes?",
-        "repo": "https://github.com/anujbalak/mausam",
-        "preview": "https://anujbalak.github.io/mausam/"
-    },
+  "mausam": {
+    "name": "Mausam",
+    "description": "Check weather with some other factors like humidity, pressure etc. also with quotes? and jokes?",
+    "repo": "https://github.com/anujbalak/mausam",
+    "preview": "https://anujbalak.github.io/mausam/"
+  },
 
-    "pick": {
-        "name": "Picks",
-        "description": "My collecting box to save music, games, books etc. ",
-        "repo": "https://github.com/anujbalak/picks",
-        "preview": "https://anujbalak.github.io/picks/"
-    },
+  "pick": {
+    "name": "Picks",
+    "description": "My collecting box to save music, games, books etc. ",
+    "repo": "https://github.com/anujbalak/picks",
+    "preview": "https://anujbalak.github.io/picks/"
+  },
 
-    "calc": {
-        "name": "Calc",
-        "description": "Calculator to calculate subtract, add, multiply etc.",
-        "repo": "https://github.com/anujbalak/calc",
-        "preview": "https://anujbalak.github.io/calc/"
-    },
+  "calc": {
+    "name": "Calc",
+    "description": "Calculator to calculate subtract, add, multiply etc.",
+    "repo": "https://github.com/anujbalak/calc",
+    "preview": "https://anujbalak.github.io/calc/"
+  },
 
-    "t3": {
-        "name": "Tic-tac-toe",
-        "description": "Play your favorite* tic-tac-toe on web with friend locally.",
-        "repo": "https://github.com/anujbalak/t3",
-        "preview": "https://anujbalak.github.io/t3/"
-    },
-    "github":"https://github.com/anujbalak"
+  "t3": {
+    "name": "Tic-tac-toe",
+    "description": "Play your favorite* tic-tac-toe on web with friend locally.",
+    "repo": "https://github.com/anujbalak/t3",
+    "preview": "https://anujbalak.github.io/t3/"
+  },
+  "github": "https://github.com/anujbalak"
 }

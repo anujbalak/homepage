@@ -1,68 +1,79 @@
 :root {
-    --menu-bg: 5, 3, 27;
+  --menu-bg: 5, 3, 27;
 }
 
 div.menu-btn-container {
-    position: absolute;
-    display: grid;
-    width: 100vw;
-    z-index: 6;
+  position: absolute;
+  display: grid;
+  width: 100vw;
+  z-index: 6;
 }
 
 button.menu-btn {
-    will-change: transform;
-    background-color: transparent;
-    border: none;
-    color: currentColor;
-    font-size: 2em;
-    justify-self: end;
-    margin-right: 2em;
-    margin-top: 1.5em;
-    cursor: pointer;
-    transition: transform ease-out 0.3s;
+  will-change: transform;
+  background-color: transparent;
+  border: none;
+  color: currentColor;
+  font-size: 2em;
+  justify-self: end;
+  margin-right: 2em;
+  margin-top: 1.5em;
+  cursor: pointer;
+  transition: transform ease-out 0.3s;
 }
 
 button.menu-btn.clicked {
-    transform: rotate(-90deg);
-    transition: transform ease-in 0.3s;
+  transform: rotate(-90deg);
+  transition: transform ease-in 0.3s;
 }
 
 menu.menu-page {
-    min-height: 100vh;   
+  min-height: 100vh;
 }
 
 div.menu-btn-container.clicked {
-    position: relative;
+  position: relative;
 }
 
 body.menu-screen {
-    background: url(../../assets/images/background/nnnoise.svg);
-    background-color: rgb(var(--menu-bg));
+  background: url(../../assets/images/background/nnnoise.svg);
+  background-color: rgb(var(--menu-bg));
 }
 
 div.menu-options {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 0.7em;
-    font-size: 3rem;
-    margin-top: 1em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7em;
+  font-size: 3rem;
+  margin-top: 1em;
 }
 
-a.about, a.projects, a.contact, a.credits {
-    text-decoration: none;
-    color: rgb(var(--header-text-color));
-    font-family: monospace, sans-serif;
-    font-weight: 600;
+a.about,
+a.projects,
+a.contact,
+a.credits {
+  text-decoration: none;
+  color: rgb(var(--header-text-color));
+  font-family: monospace, sans-serif;
+  font-weight: 600;
 }
 
-a.about:hover, a.projects:hover, a.contact:hover, a.credits:hover, a.about:focus, a.projects:focus, a.contact:focus, a.credits:focus, a.clicked {
-    border-bottom: 2px currentColor dashed;
-}  
+a.about:hover,
+a.projects:hover,
+a.contact:hover,
+a.credits:hover,
+a.about:focus,
+a.projects:focus,
+a.contact:focus,
+a.credits:focus,
+a.clicked {
+  border-bottom: 2px currentColor dashed;
+}
 
 @media only screen and (max-width: 600px) {
-    button.menu-btn {
-        justify-self: center;
-        margin-right: 0;
-    }
+  button.menu-btn {
+    justify-self: center;
+    margin-right: 0;
+  }
 }

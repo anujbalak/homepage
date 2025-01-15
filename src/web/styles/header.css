@@ -1,60 +1,63 @@
 header.header {
-    background-color: rgb(var(--header-bg-color));
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  background-color: rgb(var(--header-bg-color));
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 header.header {
-    background-image: radial-gradient(rgba(234, 234, 234, 0.5) 1px, transparent 1px);
-    background-size: 20px 20px;
+  background-image: radial-gradient(
+    rgba(234, 234, 234, 0.5) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
 }
 
 div.greeting-text-container {
-    display: flex;
-    flex-direction: row;
-    place-self: center;
+  display: flex;
+  flex-direction: row;
+  place-self: center;
 }
 
-h1.greeting-text, p.greeting-zero  {
-    font-size: calc(5vw + 5rem);
-    font-family: monospace;
-    color: rgb(var(--header-text-color));
-    font-weight: 700;
+h1.greeting-text,
+p.greeting-zero {
+  font-size: calc(5vw + 5rem);
+  font-family: monospace;
+  color: rgb(var(--header-text-color));
+  font-weight: 700;
 }
 
 div.greeting-text {
-    
 }
 
 p.greeting-zero {
-    color: rgb(var(--black-color));
+  color: rgb(var(--black-color));
 }
 
 p.greeting-zero {
-    will-change: transform;
-    transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
 }
 
 p.greeting-zero:hover {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 div.greeting-text-container {
-    opacity: 0;
-    animation: fade-in 1s ease-in-out;
-    animation-fill-mode: forwards;
+  opacity: 0;
+  animation: fade-in 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 100%;
-    }
+  100% {
+    opacity: 100%;
+  }
 }
 
 /* p.greeting-text::before {

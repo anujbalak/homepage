@@ -1,29 +1,28 @@
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(var(--header-bg-color));
+  background-color: rgb(var(--header-bg-color));
 }
 
 .page {
-   --header-bg-color: 0, 90, 255;
-   --header-text-color: 246, 246, 255;
-   --number-color: 255, 6, 0;
-   --black-color: 0, 0, 0;
-   --project-body-bg-color: 255, 255, 0;
-   --text-on-poject-body: 0, 0, 0;
-   --code-on-project-body: 149, 37, 37;
+  --header-bg-color: 0, 90, 255;
+  --header-text-color: 246, 246, 255;
+  --number-color: 255, 6, 0;
+  --black-color: 0, 0, 0;
+  --project-body-bg-color: 255, 255, 0;
+  --text-on-poject-body: 0, 0, 0;
+  --code-on-project-body: 149, 37, 37;
 }
 
 .page {
-    font-family: monospace;
+  font-family: monospace;
 }
 
 .none {
-    display: none;
+  display: none;
 }
