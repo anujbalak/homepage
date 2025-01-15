@@ -83,7 +83,7 @@ picture.footer-image {
 
 
 @media only screen and (max-width: 1200px) {
-    footer#footer-page {
+    footer.footer-page {
         grid-template-columns: none;
     }
 
