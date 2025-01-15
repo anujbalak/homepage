@@ -4,7 +4,7 @@ import "../styles/footer.css"
 import { renderHeader } from "./header.mjs"
 import { renderMainSection } from "./main.mjs";
 import { renderFooter } from './footer.mjs';
-
+import { animate } from './animate.mjs';
 
 export function rednerPage() {
     const page = document.createElement('div');
@@ -15,4 +15,5 @@ export function rednerPage() {
     renderHeader()
     renderMainSection()
     renderFooter();
+    animate();
 }
