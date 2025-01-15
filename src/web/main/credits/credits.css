@@ -9,10 +9,15 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(var(--credits-bg));
+}
+
 div.back-button-container {
     position: absolute;
     left: 5%;
     top: 5%;
+    z-index: 2;
 }
 
 div.back-button-container a {
@@ -79,4 +84,18 @@ li.credit-link-container {
 
 a {
     font-style: italic;
+}
+
+div {
+    will-change: opacity;
+    animation: fade-in ease-in-out 0.8s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
