@@ -1,3 +1,7 @@
+:root {
+    --menu-bg: 5, 3, 27;
+}
+
 div.menu-btn-container {
     position: absolute;
     display: grid;
@@ -28,6 +32,11 @@ menu.menu-page {
 
 div.menu-btn-container.clicked {
     position: relative;
+}
+
+body.menu-screen {
+    background: url(../../assets/images/background/nnnoise.svg);
+    background-color: rgb(var(--menu-bg));
 }
 
 div.menu-options {
