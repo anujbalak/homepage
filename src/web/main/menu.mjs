@@ -44,7 +44,7 @@ function renderMenu(menuBtn, menuBtnContainer) {
     about.href = '#about'
     projects.href = "#projects"
     contact.href = '#footer';
-    credits.href = '#credits'
+    credits.href = 'credits.html'
     
     document.body.appendChild(menuPage);
     menuPage.appendChild(menuOptions);
@@ -53,12 +53,24 @@ function renderMenu(menuBtn, menuBtnContainer) {
     menuOptions.appendChild(contact);
     menuOptions.appendChild(credits);
     
+    [about, projects, contact, credits].forEach(link => {
+        link.addEventListener("click", () => {
+            btnEventHandler(menuBtn, menuPage, menuBtnContainer); 
+        })
+    })
+
     toggleMenu(menuBtn, menuPage, menuBtnContainer)
 }
 
 function toggleMenu(btn, menuPage, menuBtnContainer) {
     btn.addEventListener("click", () => {
-        const page = document.querySelector('div.page');
+        btnEventHandler(btn, menuPage, menuBtnContainer);
+    })
+}
+
+function btnEventHandler(btn, menuPage, menuBtnContainer) {
+    const page = document.querySelector('div.page');
+        document.body.classList.toggle('menu-screen')
         page.classList.toggle('none');
         menuPage.classList.toggle("none");
         btn.classList.toggle('clicked')
@@ -68,5 +80,4 @@ function toggleMenu(btn, menuPage, menuBtnContainer) {
             btn.innerText = "☰";
         }
         menuBtnContainer.classList.toggle('clicked');
-    })
 }
