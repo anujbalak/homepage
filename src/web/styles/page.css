@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: rgb(var(--header-bg-color));
+}
+
 .page {
    --header-bg-color: 0, 90, 255;
    --header-text-color: 246, 246, 255;
