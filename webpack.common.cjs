@@ -4,13 +4,24 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: [path.resolve(__dirname, 'src/web/entry')],
+        homepage: "./src/web/entry/index.js",
+        credits: "./src/web/entry/credits.js"
     },
     plugins: [
         new htmlWebpackPlugin({
             title: 'Homepage',
-            filename: 'index.html'
+            filename: 'index.html',
+            chunks: ['homepage'],
+            inject: 'body'
         }),
+
+        new htmlWebpackPlugin({
+            title: 'Credits',
+            filename: 'credits.html',
+            chunks: ['credits'],
+            inject: 'body',
+            template: './src/web/main/credits/credits.html'
+        })
     ],
     output: {
         filename: '[name].bundle.js',
@@ -27,10 +38,10 @@ module.exports = {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
-            {
-                test: /\.html$/i,
-                use: ['html-loader'],
-            },
+            // {
+            //     test: /\.html$/i,
+            //     use: ['html-loader'],
+            // },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
