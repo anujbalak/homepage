@@ -6,6 +6,7 @@ div.menu-btn-container {
     position: absolute;
     display: grid;
     width: 100vw;
+    z-index: 6;
 }
 
 button.menu-btn {
